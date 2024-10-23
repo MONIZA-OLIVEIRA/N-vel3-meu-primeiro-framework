@@ -1,0 +1,77 @@
+:root {
+  --cor-fundo: #f4f4f4;
+  --cor-header: black;
+  --cor-texto-header: white;
+  --cor-borda: #ddd;
+  --cor-linha-impar: #e0e0e0;
+  --cor-linha-par: #d0d0d0;
+  --cor-botao-excluir: red;
+  --cor-texto-botao: white;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--cor-fundo);
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+thead {
+  background-color: var(--cor-header);
+  color: var(--cor-texto-header);
+}
+
+th, td {
+  padding: 15px;
+  text-align: left;
+  border: 1px solid var(--cor-borda);
+}
+
+tbody tr:nth-child(odd) {
+  background-color: var(--cor-linha-impar);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--cor-linha-par);
+}
+
+.excluir-button {
+  background-color: var(--cor-botao-excluir);
+  color: var(--cor-texto-botao);
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Adiciona transição suave */
+}
+
+.excluir-button:hover {
+  opacity: 0.8;
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+main {
+  padding: 20px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px; /* Tamanho de fonte reduzido em telas menores */
+  }
+  
+  .excluir-button {
+    padding: 8px 12px; /* Reduz o padding do botão em telas menores */
+  }
+}
